@@ -1,0 +1,14 @@
+Info Image Origin
+Dimension: 1365x2048
+Heigth: 1365 pixels
+Witdh: 2048 pixels
+Size Image: 5025 Kb
+Color Unique: 207192
+
+
+Info result Image 
+Dimension: 1365x2048
+Heigth: 1365 pixels
+Witdh: 2048 pixels
+Size Image: 4602 Kb
+Color Unique: 326

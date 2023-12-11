@@ -1,0 +1,14 @@
+Info Image Origin
+Dimension: 1920x2160
+Heigth: 1920 pixels
+Witdh: 2160 pixels
+Size Image: 4726 Kb
+Color Unique: 237548
+
+
+Info result Image 
+Dimension: 1920x2160
+Heigth: 1920 pixels
+Witdh: 2160 pixels
+Size Image: 1261 Kb
+Color Unique: 15

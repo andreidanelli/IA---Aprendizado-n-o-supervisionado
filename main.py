@@ -16,27 +16,32 @@ def saveImageResultDirectory():
 def showConfgAllImageOrigin():
     heigth_origin, width_origin, chanel_origin = img.shape
     count = validatorColorUniqueImageOrigin()
-
-    print('\n')
-    print(f'Info Image Origin')
-    print(f'Dimension: {heigth_origin}x{width_origin}')
-    print(f'Heigth: {heigth_origin} pixels')
-    print(f'Witdh: {width_origin} pixels')
-    print(f'Size Image: {os.path.getsize(constants.const.PATH_IMAGE_ORIGIN) / 1024:.0f} Kb')
-    print(f'Color Unique: {count}')
-
+    
+    #print('\n')
+    #print(f'Info Image Origin')
+    #print(f'Dimension: {heigth_origin}x{width_origin}')
+    #print(f'Heigth: {heigth_origin} pixels')
+    #print(f'Witdh: {width_origin} pixels')
+    #print(f'Size Image: {os.path.getsize(constants.const.PATH_IMAGE_ORIGIN) / 1024:.0f} Kb')
+    #print(f'Color Unique: {count}')
+    with open (f'{constants.const.NAME_IMAGE_ORIGIN}'+'_K'+str(K)+'.txt','w') as arquivo:
+        arquivo.write('Info Image Origin\n')
+        arquivo.write(f'Dimension: {heigth_origin}x{width_origin}\n')
+        arquivo.write(f'Heigth: {heigth_origin} pixels\n')
+        arquivo.write(f'Witdh: {width_origin} pixels\n')
+        arquivo.write(f'Size Image: {os.path.getsize(constants.const.PATH_IMAGE_ORIGIN) / 1024:.0f} Kb\n')
+        arquivo.write(f'Color Unique: {count}\n\n\n')
 
 def showConfgAllImagemResult():
     heigth_result, width_result, chanel_result = res2.shape
     count = validatorColorUniqueImageResult()
-
-    print('\n')
-    print(f'Info Image Result')
-    print(f'Dimension: {heigth_result}x{width_result}')
-    print(f'Heigth: {heigth_result} pixels')
-    print(f'Witdh: {width_result} pixels')
-    print(f'Size Image: {os.path.getsize(directory) / 1024:.0f} Kb')
-    print(f'Color Unique: {count}')
+    with open (f'{constants.const.NAME_IMAGE_ORIGIN}'+'_K'+str(K)+'.txt','a') as arquivo_result:
+        arquivo_result.write(f'Info result Image \n')
+        arquivo_result.write(f'Dimension: {heigth_result}x{width_result}\n')
+        arquivo_result.write(f'Heigth: {heigth_result} pixels\n')
+        arquivo_result.write(f'Witdh: {width_result} pixels\n')
+        arquivo_result.write(f'Size Image: {os.path.getsize(directory) / 1024:.0f} Kb\n')
+        arquivo_result.write(f'Color Unique: {count}\n')
 
 
 def validatorColorUniqueImageOrigin():
@@ -56,8 +61,7 @@ def validatorColorUniqueImageResult():
 
 img = cv2.imread(constants.const.PATH_IMAGE_ORIGIN)
 Z = img.reshape((-1, 3))
-K = 1000
-
+K = 6
 # convert to np.float32
 Z = np.float32(Z)
 
